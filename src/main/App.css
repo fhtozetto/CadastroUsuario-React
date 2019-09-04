@@ -1,0 +1,55 @@
+:root { /* Variáveis para o CSS (Puro) */
+    --bg-dark: #1a2f3a; /* Cor do menu */
+
+    --logo-height: 100px; /* Altura do Logo */
+    --header-height: 100px; /* Altura do Header */
+    --aside-width: 225px; /* Largura do Manu */
+    --footer-height: 40px; /* Altura do Footer */
+
+    --shadow: /* será usado no Header e no Footer */
+        0 2px 23px 0 rgba(0, 0, 0, 0.1),
+        0 2px 49px 0 rgba(0, 0, 0, 0.06);
+}
+
+* { /* Seletor universal */
+    box-sizing: border-box; /* preeenchimento na area total */
+    font-family: 'Montserrat', sans-serif; /* Fonte padrão */
+}
+
+/* Layout de Grid */
+
+.app {
+    margin: 0px;
+    display: grid; /* Grid do CSS */
+        grid-template-columns: var(--aside-width) 1fr; /* 2 colunas a primeira: 1ª do tamanho do aside-width e 2ª ocupa o restante da pagina */
+    grid-template-rows: 
+        var(--header-height) /* Altura do Cabeçalho */
+        1fr /* Conteudo da Página */
+        var(--footer-height); /* Altura do Rodapé */
+    grid-template-areas: 
+        "logo header"
+        "menu content"
+        "menu footer";
+    height: 100vh; /* vai ocupar a altura inteira */
+    background-color: #F5F5F5; /* fundo da tela */
+}
+
+aside.logo {
+    grid-area: logo;
+}
+
+header.header {
+    grid-area: header;
+}
+
+aside.menu-area {
+    grid-area: menu;
+}
+
+main.content {
+    grid-area: content;
+}
+
+footer.footer {
+    grid-area: footer;
+}
