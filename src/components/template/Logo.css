@@ -1,0 +1,11 @@
+aside.logo {
+    background-color: var(--bg-dark); /* essa é a variavel que está em App.css */
+    display: flex; /* Flexbox */
+    justify-content: center;
+    align-items: center;
+}
+
+aside.logo img {
+    padding: 0px 15px; /* na horizontal 0px e na vertical 15px */
+    width: 100%; /* ocupa a area total do logo */
+}
