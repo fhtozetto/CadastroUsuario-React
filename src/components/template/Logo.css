@@ -9,3 +9,9 @@ aside.logo img {
     padding: 0px 15px; /* na horizontal 0px e na vertical 15px */
     width: 100%; /* ocupa a area total do logo */
 }
+
+@media(max-width: 576px) {
+    aside.logo img {
+        width: 350px;
+    }
+}
